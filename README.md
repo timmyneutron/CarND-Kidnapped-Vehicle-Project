@@ -21,7 +21,7 @@ Relevant classes:
 ## Getting Started
 Code is stored in the `src` directory.
 
-To run the code, execute the following:
+To run the code, execute the following in the top level directory:
 
 `./clean.sh`
 
