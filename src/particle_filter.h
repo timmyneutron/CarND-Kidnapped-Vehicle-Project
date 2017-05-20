@@ -40,6 +40,9 @@ public:
 	// Set of current particles
 	std::vector<Particle> particles;
 
+	// random number generator
+	default_random_engine gen;
+
 	// Constructor
 	// @param M Number of particles
 	ParticleFilter() : num_particles(0), is_initialized(false) {}
