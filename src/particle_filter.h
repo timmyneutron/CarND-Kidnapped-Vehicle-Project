@@ -41,7 +41,7 @@ public:
 	std::vector<Particle> particles;
 
 	// random number generator
-	default_random_engine gen;
+	std::default_random_engine gen;
 
 	// Constructor
 	// @param M Number of particles
