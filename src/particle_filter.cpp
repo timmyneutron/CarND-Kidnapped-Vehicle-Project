@@ -3,6 +3,9 @@
  *
  *  Created on: Dec 12, 2016
  *      Author: Tiffany Huang
+ *
+ *  Assignment completed: May 20, 2017
+ *  	Student: Tim Abrahamsen
  */
 
 #include <random>
