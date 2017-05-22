@@ -20,14 +20,10 @@ struct Particle {
 	double weight;
 };
 
-
-
 class ParticleFilter {
 	
 	// Number of particles to draw
 	int num_particles; 
-	
-	
 	
 	// Flag, if filter is initialized
 	bool is_initialized;
@@ -39,9 +35,6 @@ public:
 	
 	// Set of current particles
 	std::vector<Particle> particles;
-
-	// random number generator
-	std::default_random_engine gen;
 
 	// Constructor
 	// @param M Number of particles
