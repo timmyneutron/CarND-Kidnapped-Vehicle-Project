@@ -17,6 +17,9 @@
 
 using namespace std;
 
+// initialize random number generator
+static default_random_engine gen;
+
 void ParticleFilter::init(double x, double y, double theta, double std[]) {
 	// TODO: Set the number of particles. Initialize all particles to first position (based on estimates of 
 	//   x, y, theta and their uncertainties from GPS) and all weights to 1. 
@@ -25,9 +28,6 @@ void ParticleFilter::init(double x, double y, double theta, double std[]) {
 
 	// initialize number of particles
 	num_particles = 100;
-
-	// initialize random number generator
-	std::default_random_engine gen;
 
 	// initialize normal distributions around GPS measurements
 	normal_distribution<double> x_dist(x, std[0]);
@@ -58,9 +58,6 @@ void ParticleFilter::prediction(double delta_t, double std_pos[], double velocit
 	// NOTE: When adding noise you may find std::normal_distribution and std::default_random_engine useful.
 	//  http://en.cppreference.com/w/cpp/numeric/random/normal_distribution
 	//  http://www.cplusplus.com/reference/random/default_random_engine/
-
-	// initialize random number generator
-	std::default_random_engine gen;
 
 	// initialize normal distributions for x, y, and theta error (with mean = 0)
 	normal_distribution<double> x_dist(0, std_pos[0]);
@@ -230,9 +227,6 @@ void ParticleFilter::resample() {
 	// TODO: Resample particles with replacement with probability proportional to their weight. 
 	// NOTE: You may find std::discrete_distribution helpful here.
 	//   http://en.cppreference.com/w/cpp/numeric/random/discrete_distribution
-
-	// initialize random number generator
-	std::default_random_engine gen;
 
 	// initialize discrete distribution using weights vector
 	discrete_distribution<int> p_dist(weights.begin(), weights.end());
